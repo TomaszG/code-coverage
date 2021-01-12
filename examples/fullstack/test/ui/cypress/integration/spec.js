@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 // load extra files to instrument on the fly
-const { reverse } = require('../../string-utils')
+const { reverse } = require('../../../../string-utils')
 
 it('uses frontend code and calls backend', () => {
   cy.visit('/')
