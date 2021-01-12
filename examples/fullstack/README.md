@@ -1,21 +1,13 @@
-# example: fullstack
+# example for https://github.com/cypress-io/code-coverage/issues/380
 
-> Combined code coverage from the backend code, and e2e and unit tests
-
-This example runs instrumented server code, that serves instrumented frontend code, and instruments the unit tests on the fly. The final report combines all 3 sources of information.
-
-To run
-
+1. Run the app
 ```sh
 $ npm run dev
 ```
+2. Check generated report.
 
-You should see messages from the plugin when it saves each coverage object
+**Expected result:**
+HTML and cobertura reports should be generated in examples/fullstack/coverage, according to package.json config.
 
-![Coverage messages](images/fullstack.png)
-
-In the produced report, you should see
-
-- `server/server.js` coverage for backend
-- `main.js` coverage from end-to-end tests
-- `string-utils.js` coverage from unit tests
+**Current result:**
+Default set of reports is generated in examples/fullstack/test/ui/coverage, also generated report paths are messed up.
