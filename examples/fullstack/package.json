@@ -4,8 +4,14 @@
   "devDependencies": {},
   "scripts": {
     "start": "../../node_modules/.bin/nyc --silent node server/server",
-    "cy:open": "../../node_modules/.bin/cypress open",
+    "cy:open": "../../node_modules/.bin/cypress open --project test/ui",
     "dev": "../../node_modules/.bin/start-test 3003 cy:open",
     "report": "../../node_modules/.bin/nyc report --reporter text"
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "cobertura"
+    ]
   }
 }
